@@ -11,7 +11,7 @@ branches:
 # list of commands to run to setup the environment
 install:
     - pip install pandas
-    - pip install rsts
+    - pip install rstr
     - pip install random
     - python setup.py install
 
