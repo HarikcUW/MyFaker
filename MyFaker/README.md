@@ -25,3 +25,43 @@ This package is helpful for Students, programmers/developers, data scientists an
 - David, a student, would like to create a model using eCommerce sales data, but it is hard to find real credit card data for his experiment. He can use this package to generate his own data. He can specify the format of the card and other properties and generate thousands of records in no time.
 - Mary, a data scientist, wants to analyze a model's performance and needs quality data. She can use this package to generate necessary data.
 
+How to use:
+
+- Import MyFaker module:
+- Prepare configuration:
+```
+configList = [{'sourceType':'dataframe'
+                  ,'values' : [{'name' : 'df_Country', 'df' : df_Country
+                                  ,'columns': [{'colName' : 'CountryCode', 'colRename' : 'CountryISOCode' } 
+                                                ,{'colName' : 'Region', 'colRename' : 'CountryRegion'}]
+                                }
+                               ,{'name' : 'df_Color', 'df' : df_Color
+                                  ,'columns': [{'colName' : 'Color', 'colRename' : 'DressColor' }] 
+                                }
+                               ,{'name' :'df_Product', 'df' : df_Product
+                                  ,'columns': [{'colName' : 'ProductId', 'colRename' : 'ProductIdentifier' } 
+                                              ,{'colName' : 'ProductName' }]}
+                              ]
+                }
+              ,{'sourceType':'RegularExpression'
+                  ,'values' : [{'name' :'Featurs'
+                    ,'columns': [{'colName' : 'FirstName', 'prefix' : 'FirstName',  'sufix' : '', 'regExpression' : '[0-9]{2}'  } 
+                                ,{'colName' : 'UserEmail', 'regExpression' : '[A-Za-z]{6,10}[0-9]{2}@[a-z]{5}\d\.com' } ]}]
+                }
+              ,{'sourceType':'Metrics', 'values' : [{'name' :'Featurs'
+                ,'columns': [{'colName' : 'SalesQuantity', 'dataType' : 'int', 'startValue' : '10', 'endValue' : '40'  } 
+                             ,{'colName' : 'SalesAmount', 'dataType' : 'float', 'startValue' : '10', 'endValue' : '40'  } ]}]
+                }
+             ]
+```
+- Generate data:
+
+- Sample Output: MyFaker module returns generated fake data as pandas data frame.
+![image](https://user-images.githubusercontent.com/92060455/156967364-718d55e7-2102-494d-bce2-c1f60c922242.png)
+
+## Example:1
+
+## Limitations:
+-	rstr module doesn’t support all regular expressions, any unsupported complex expression required own implementation
+-	Not using distributes design, so result data set size & volume depends on user system capacity
+
