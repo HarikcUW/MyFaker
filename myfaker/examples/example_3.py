@@ -5,7 +5,7 @@ For Metrics, it will return randon value between start and end values.
 
 import pandas as pd 
 import os
-from MyFaker.code.helper import DataGenerator
+from myfaker.code.helper import DataGenerator
 
 df_Color = pd.DataFrame(['Green','Red','Yellow','Blue'], columns = ['Color'])
 
