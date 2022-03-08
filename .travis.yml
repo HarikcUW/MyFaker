@@ -12,7 +12,6 @@ branches:
 install:
     - pip install pandas
     - pip install rstr
-    - pip install random
     - python setup.py install
 
 # a list of commands to run before the main script
