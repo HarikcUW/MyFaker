@@ -12,11 +12,12 @@ branches:
 install:
     - pip install pandas
     - pip install rstr
+    - pip install flake8
     - python setup.py install
 
 # a list of commands to run before the main script
 before_script:
-    - "flake8 MyFaker"
+
 
 # the actual commands to run
 script:
@@ -24,4 +25,5 @@ script:
 
 # generate a coverage report to send to back to user
 after_success:
-
+    - flake8 --version
+    - flake8 MyFaker
