@@ -1,7 +1,7 @@
-```
+'''
 Generate fake data with MyFaker library using list and regular expressions
 For Metrics, it will return randon value between start and end values. 
-```
+'''
 import pandas as pd 
 from MyFaker.code.helper import DataGenerator
 
