@@ -7,7 +7,9 @@ from myfaker.code.metricsProcessor import MetricsProcessor
 from myfaker.code.dataframeProcessor import DataframeProcessor
 
 class TestHelperMethods(unittest.TestCase):
-
+    
+    print("Testcases execution started")
+    
     def test_getDfElements(self):
         df_Product = pd.DataFrame([['Laptop', 'Physical', 798.0], ['Keyboard', 'Physical', 56.50], ['Subscription', 'Digital', 15.0]]
             , columns=['Product','Type','Cost'])
@@ -67,6 +69,9 @@ class TestHelperMethods(unittest.TestCase):
 
         # Check if all values are integers
         self.assertTrue((df_Metric['SalesQuantity'] != df_Metric['SalesQuantity'].astype(int)).all())  
+        
+    print("Testcases execution completed")
+        
 
 if __name__ == '__main__':
     unittest.main()
