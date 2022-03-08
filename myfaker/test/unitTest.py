@@ -1,5 +1,5 @@
 import unittest
-from MyFaker.code.helper import DataGenerator
+from myfaker.code.helper import DataGenerator
 import pandas as pd
 
 class TestHelperMethods(unittest.TestCase):
