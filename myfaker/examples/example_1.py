@@ -4,7 +4,7 @@ This exampe will return random text for FirstName and Email as defined in regula
 For Metrics, it will return randon value between start and end values.
 '''
 
-from MyFaker.code.helper import DataGenerator
+from myfaker.code.helper import DataGenerator
 
 configList = [{'sourceType': 'RegularExpression', 'values': [{'name': 'Featurs'
                 , 'columns': [{'colName': 'FirstName', 'prefix': 'FirstName','sufix': '','regExpression': '[0-9]{2}'}
