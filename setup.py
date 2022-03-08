@@ -6,7 +6,7 @@ from setuptools import setup
 #    long_description = fh.read()
 
 setup(
-    name="MyFaker",
+    name="myfaker",
     author="Hari Kishor Chintada",
     author_email="harikc@uw.edu",
     description="Fake data generator",
