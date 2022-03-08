@@ -4,8 +4,8 @@ from .constants import *
 
 class DataframeProcessor:
 
-    def __init__(self, n, configValue) -> None:
-        self._n = n
+    def __init__(self, sampleSize, configValue) -> None:
+        self._n = sampleSize
         self._configValue = configValue
 
     def getDfElements(self, df, columnList):
