@@ -25,7 +25,7 @@ class TestHelperMethods(unittest.TestCase):
     def test_renameDfColumn(self):
         df_Color = pd.DataFrame(['Green','Red','Yellow','Blue'], columns = ['Color'])
         columnRenameDict = {'Color': 'NewColor'}
-        dfProcessor = DataGenerator(10,[])
+        dfProcessor = DataframeProcessor(10,[])
         self.assertTrue('NewColor' in dfProcessor.renameDfColumn(df_Color,columnRenameDict).columns)
         
     def test_getRegExDataFixedSize(self):
