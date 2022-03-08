@@ -1,8 +1,8 @@
-```
+'''
 Generate fake data with MyFaker library using regular expressions
 This exampe will return random text for FirstName and Email as defined in regular expression 
 For Metrics, it will return randon value between start and end values. 
-```
+'''
 
 from MyFaker.code.helper import DataGenerator
 configList = [{'sourceType' : 'RegularExpression', 'values' : [{'name' : 'Featurs'
