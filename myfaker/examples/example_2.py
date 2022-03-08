@@ -3,7 +3,7 @@ Generate fake data with MyFaker library using list and regular expressions
 For Metrics, it will return randon value between start and end values.
 '''
 import pandas as pd 
-from myfaker.code.helper import DataGenerator
+from myfaker.code.dataGenerator import DataGenerator
 
 df_Color = pd.DataFrame(['Green','Red','Yellow','Blue'], columns = ['Color'])
 
@@ -17,5 +17,5 @@ configList = [{'sourceType': 'dataframe', 'values': [{'name': 'df_Color','df': d
                              , {'colName': 'SalesAmount', 'dataType': 'float', 'startValue': '10', 'endValue': '40'}]}]}]
 
 fakeData = DataGenerator(10, configList)
-df_fakeData = fakeData.processInput()
+df_fakeData = fakeData.generateData()
 print(df_fakeData)
