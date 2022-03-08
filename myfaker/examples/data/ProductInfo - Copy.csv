@@ -1,0 +1,11 @@
+ProductId	ProductName	ProductCategory	ProductType
+1001	XboxS	Console	Physical
+1002	CallOfDuty	Game	Digital
+1003	Xbox360	Console	Physical
+1004	XboxOne	Console	Physical
+1005	Forza IV	Game	Digital
+1006	Controller	Accessiry	Physical
+1007	Live Sub	Subscription	Digital
+1008	Surface	Hardware	Physical
+1009	Surface Pen	Accessiry	Physical
+1010	StoreCard	Giftcard	Digital
