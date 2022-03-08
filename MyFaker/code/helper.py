@@ -23,10 +23,10 @@ class DataGenerator:
     def renameDfColumn(self, df, columnRenameDict):
         return df.rename(columns=columnRenameDict)
 
-    ```
+    '''
     Read column details from configuration and get random samples from the dataframe
     If rename columns specified create a dictionary and rename all columns once 
-    ```
+    '''
     def getRandomDataFromDF(self, df, columns):
         if not columns:
             print("Dict is empty")
@@ -48,10 +48,10 @@ class DataGenerator:
         df_t = self.renameDfColumn(df_t, renameColumnsDict)
         return df_t
     
-    ```
+    '''
     For each dataframe listed in configuration get random sample data
     combine data from all data frames and generate single output
-    ```
+    '''
     def getDataFromDF(self, configValue):
         rdf = pd.DataFrame()
         for params in configValue:
@@ -77,10 +77,10 @@ class DataGenerator:
             data.append(data_regEx)
         return pd.DataFrame(data, columns=[columnName])
 
-    ```
+    '''
     For each column listed in RegulaExpression configuration get random sample data
     combine data from all data frames and generate single output
-    ```
+    '''
     def getDataFromRE(self, expressions):
         rdf = pd.DataFrame()
         for item in expressions:
@@ -119,10 +119,10 @@ class DataGenerator:
                 metricData = metricData.reset_index(drop=True)
                 rdf = pd.concat([rdf, metricData], axis = 1)
         return rdf 
-    ```
+    '''
     Process input configuration and return dataframe with define columns
     expected values for sourceType item :  dataframe, RegularExpression, Metrics
-    ```
+    '''
     def processInput(self):
         df_data = pd.DataFrame()
         re_data = pd.DataFrame()
