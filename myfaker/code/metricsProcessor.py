@@ -3,8 +3,8 @@ import random
 
 class MetricsProcessor:
 
-    def __init__(self, n, metricInfo) -> None:
-        self._n = n
+    def __init__(self, sampleSize, metricInfo) -> None:
+        self._n = sampleSize
         self._metricInfo = metricInfo
 
     def getMetricData(self,columnInfo):
