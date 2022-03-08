@@ -8,7 +8,7 @@ from .dataframeProcessor import DataframeProcessor
 class DataGenerator:
 
 
-    def __init__(self, n, configList) -> None:
+    def __init__(self, sampleSize, configList) -> None:
         self.__config = configList
         self.__n = MAX_SAMPLE_SIZE if n < 1 or n > MAX_SAMPLE_SIZE else n
 
