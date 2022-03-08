@@ -12,7 +12,7 @@ class DataGenerator:
         self.__config = configList
         self.__n = MAX_SAMPLE_SIZE if n < 1 or n > MAX_SAMPLE_SIZE else n
 
-    def processInput(self):
+    def generateData(self):
         df_data = pd.DataFrame()
         re_data = pd.DataFrame()
         metrics_data = pd.DataFrame()
