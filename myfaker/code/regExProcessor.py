@@ -3,7 +3,7 @@ import rstr
 
 class RegExProcessor:
 
-    def __init__(self, n, expressions) -> None:
+    def __init__(self, n, regExpressions) -> None:
         self._n = n
         self._expressions = expressions
 
