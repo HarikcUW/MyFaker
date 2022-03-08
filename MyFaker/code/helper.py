@@ -3,6 +3,7 @@ import random
 import rstr
 from .constants import *
 
+
 class DataGenerator:
     
     def __init__(self, n, configList) -> None:
@@ -14,11 +15,11 @@ class DataGenerator:
 
     def isUpper(self, txt):
         return txt.isupper()
-    
+
     # Get n random samples from dataframe
     def getDfElements(self, df, columnList):
         return df.sample(self.__n, replace=REPEAT_SAMPLE)[df.columns[df.columns.isin(columnList)]]
-    
+
     # Rename data frmae columns using dictionary
     def renameDfColumn(self, df, columnRenameDict):
         return df.rename(columns=columnRenameDict)
@@ -47,7 +48,7 @@ class DataGenerator:
 
         df_t = self.renameDfColumn(df_t, renameColumnsDict)
         return df_t
-    
+
     '''
     For each dataframe listed in configuration get random sample data
     combine data from all data frames and generate single output
@@ -55,9 +56,7 @@ class DataGenerator:
     def getDataFromDF(self, configValue):
         rdf = pd.DataFrame()
         for params in configValue:
-            df_Name = params['name']
             df = params['df']
-            #df = getDFUsingName(df_List, df_Name)
             columns = params['columns']
             df_t = self.getRandomDataFromDF(df, columns)
             df_t = df_t.reset_index(drop=True)
@@ -90,7 +89,7 @@ class DataGenerator:
                 regExData = regExData.reset_index(drop=True)
                 rdf = pd.concat([rdf, regExData], axis=1)
         return rdf
-    
+
     # Generate random int or float value between start and end value
     def getMetricData(self, columnInfo):
         columnName = columnInfo['colName']
@@ -99,10 +98,10 @@ class DataGenerator:
         endValue = 100
         if('startValue' in columnInfo.keys()):
             startValue = columnInfo['startValue']
-        
+
         if('endValue' in columnInfo.keys()):
             endValue = columnInfo['endValue']
-            
+
         if(columnDataType == 'float'):
             data = [random.uniform(float(startValue), float(endValue)) for x in range(self.__n)]
         else:
@@ -118,7 +117,8 @@ class DataGenerator:
                 metricData = self.getMetricData(columnInfo)
                 metricData = metricData.reset_index(drop=True)
                 rdf = pd.concat([rdf, metricData], axis = 1)
-        return rdf 
+        return rdf
+
     '''
     Process input configuration and return dataframe with define columns
     expected values for sourceType item :  dataframe, RegularExpression, Metrics
@@ -130,8 +130,6 @@ class DataGenerator:
         final_data = pd.DataFrame()
         try: 
             for cfg in self.__config:
-                #print("_____________________")
-                #print("sourceType: %s" %(cfg['sourceType']))
                 if(cfg['sourceType'] == 'dataframe'):
                     vals = cfg['values']
                     df_data = self.getDataFromDF(vals)
@@ -143,11 +141,11 @@ class DataGenerator:
                     m_data = self.getMetricsData(vals)
                 else:
                     raise Exception("Invalid sourcetype value in Config:" + cfg['sourceType'])
-                
+
             df_data = df_data.reset_index(drop=True)
             re_data = re_data.reset_index(drop=True)
             m_data = m_data.reset_index(drop=True)
-        
+
             final_data = pd.concat([df_data, re_data, m_data], axis=1)           
             return final_data
             raise Exception("Error in generating data")
