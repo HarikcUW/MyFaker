@@ -1,8 +1,8 @@
 ## Data 515: Software Design for Data Science
-[![Build Status](https://api.travis-ci.com/HarikcUW/MyFaker.svg?branch=main)](https://travis-ci.com/github/HarikcUW/MyFaker)
+[![Build Status](https://api.travis-ci.com/HarikcUW/MyFaker.svg?branch=main)](https://travis-ci.com/github/HarikcUW/myfaker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### Git Repo path (https://github.com/HarikcUW/MyFaker.git)
+### Git Repo path (https://github.com/HarikcUW/myfaker.git)
 ## MyFaker - Fake data generator
 
 ## Introduction
@@ -30,13 +30,13 @@ This package is helpful for Students, programmers/developers, data scientists an
 Follow below steps to use the MyFaker package.
 - Get latest code from Repo
 
-    ```git clone https://github.com/HarikcUW/MyFaker.git```
+    ```git clone https://github.com/HarikcUW/myfaker.git```
 - Check and update constants in constants.py file.
     - You can define Max number of rows and want to repeat any values or not
 - Install MyFaker package using setup
 
     ``` python setup.py install ```
-- In your script file, Import MyFaker package
+- In your script file, Import myfaker package
 - Define data schema and prepare configuration dictionary list
 - Create an object and call processInput function with parameters (number of rows to generate, configuration dictionary list)
 - Capture return data frame
@@ -54,7 +54,7 @@ Config parameter dictionary has following items
 ### Generate random data using regular expression. In this scenario no input data is required.
 ```
 # import MyFaker package
-from MyFaker.code.helper import DataGenerator
+from myfaker.code.helper import DataGenerator
 
 # Define config dictionary list. rstr package is used to generate data as defined in regular expression  
 configList = [{'sourceType':'RegularExpression', 'values' : [ {'name' :'Featurs'
@@ -90,7 +90,7 @@ Output:
 ### Generate random data using data frame. In this scenario user can get data from a file or create a list and convert it to data frame. 
 ```
 import pandas as pd 
-from MyFaker.code.helper import DataGenerator
+from myfaker.code.helper import DataGenerator
 
 df_Color = pd.DataFrame(['Green','Red','Yellow','Blue'], columns = ['Color'])
 
