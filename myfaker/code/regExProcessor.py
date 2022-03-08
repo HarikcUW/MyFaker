@@ -5,7 +5,7 @@ class RegExProcessor:
 
     def __init__(self, n, regExpressions) -> None:
         self._n = n
-        self._expressions = expressions
+        self._expressions = regExpressions
 
     def getRegExData(self,columnInfo):
         data = []
