@@ -6,14 +6,15 @@ from .constants import *
 #import constants
 
 class DataGenerator:
+    
     def __init__(self, n, configList) -> None:
         self.__config = configList
         self.__n = MAX_SAMPLE_SIZE if n < 1 or n > MAX_SAMPLE_SIZE else n
 
-    def toUpper(self,txt):
+    def toUpper(self, txt):
         return txt.upper()
 
-    def isUpper(self,txt):
+    def isUpper(self, txt):
         return txt.isupper()
 
     def getDfElements(self, df, columnList):
@@ -66,8 +67,8 @@ class DataGenerator:
         for i in range(self.__n):
             data_regEx = prefix + rstr.xeger(regExp)
             data.append(data_regEx)
-            
-        return pd.DataFrame(data, columns = [columnName])
+
+        return pd.DataFrame(data, columns=[columnName])
 
     def getDataFromRE(self, expressions):
         rdf = pd.DataFrame()
@@ -80,7 +81,7 @@ class DataGenerator:
             
         return rdf
 
-    def getMetricData(self,columnInfo):
+    def getMetricData(self, columnInfo):
         columnName = columnInfo['colName']
         columnDataType = columnInfo['dataType']
         startValue = 1
@@ -92,11 +93,11 @@ class DataGenerator:
             endValue = columnInfo['endValue']
             
         if(columnDataType == 'float'):
-            data = [random.uniform(float(startValue),float(endValue)) for x in range(self.__n)]
+            data = [random.uniform(float(startValue), float(endValue)) for x in range(self.__n)]
         else:
-            data = [random.randint(int(startValue),int(endValue)) for x in range(self.__n)]
+            data = [random.randint(int(startValue), int(endValue)) for x in range(self.__n)]
 
-        return pd.DataFrame(data, columns = [columnName])
+        return pd.DataFrame(data, columns=[columnName])
 
     def getMetricsData(self, metricInfo):
         rdf = pd.DataFrame()
@@ -104,7 +105,7 @@ class DataGenerator:
             columns = item['columns']
             for columnInfo in columns:
                 metricData = self.getMetricData(columnInfo)
-                metricData = metricData.reset_index(drop = True)
+                metricData = metricData.reset_index(drop=True)
                 rdf = pd.concat([rdf, metricData], axis = 1)
             
         return rdf 
@@ -136,4 +137,4 @@ class DataGenerator:
             return final_data
             raise Exception("Error in generating data")
         except Exception as e:
-            print("Error: " + repr(e)) 
+            print("Error: " + repr(e))
