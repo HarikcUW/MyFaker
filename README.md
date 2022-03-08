@@ -29,10 +29,12 @@ This package is helpful for Students, programmers/developers, data scientists an
 ## How to Use:
 Follow below steps to use the MyFaker package.
 - Get latest code from Repo
+
     ```git clone https://github.com/HarikcUW/MyFaker.git```
 - Check and update constants in constants.py file.
     - You can define Max number of rows and want to repeat any values or not
 - Install MyFaker package using setup
+
     ``` python setup.py install ```
 - In your script file, Import MyFaker package
 - Define data schema and prepare configuration dictionary list
@@ -137,3 +139,4 @@ Data is required for almost all projects and often developers need to generate d
 ## References:
 
 - https://github.com/leapfrogonline/rstr
+- https://github.com/joke2k/faker
