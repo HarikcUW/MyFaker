@@ -10,7 +10,7 @@ class DataGenerator:
 
     def __init__(self, sampleSize, configList) -> None:
         self.__config = configList
-        self.__n = MAX_SAMPLE_SIZE if n < 1 or n > MAX_SAMPLE_SIZE else n
+        self.__n = MAX_SAMPLE_SIZE if sampleSize < 1 or sampleSize > MAX_SAMPLE_SIZE else sampleSize
 
     def generateData(self):
         df_data = pd.DataFrame()
