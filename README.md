@@ -1,5 +1,5 @@
 ## Data 515: Software Design for Data Science
-[![Build Status](https://api.travis-ci.com/harikcUW/Data515_FakerExt.svg?branch=main)](https://travis-ci.com/github/harikcUW/Data515_FakerExt)
+[![Build Status](https://api.travis-ci.com/HarikcUW/MyFaker.svg?branch=main)](https://travis-ci.com/github/HarikcUW/MyFaker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## MyFaker - Fake data generator
