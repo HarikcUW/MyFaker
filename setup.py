@@ -12,13 +12,12 @@ setup(
     description="Fake data generator",
     long_description="Fake data generator",
     long_description_content_type="text/markdown",
-    url="https://github.com/harikcUW",
+    url="https://github.com/harikcUW/myfaker/",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    # package_dir={"": "cooksmart"},
     packages= find_packages(),
     python_requires=">=3.0",
     #install_requires=['pandas', 'rsts']
