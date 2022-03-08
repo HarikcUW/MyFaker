@@ -26,4 +26,4 @@ script:
 # generate a coverage report to send to back to user
 after_success:
     - flake8 --version
-    - flake8 MyFaker
+    - flake8 myfaker
