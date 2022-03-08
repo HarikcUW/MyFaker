@@ -2,6 +2,7 @@
 [![Build Status](https://api.travis-ci.com/HarikcUW/MyFaker.svg?branch=main)](https://travis-ci.com/github/HarikcUW/MyFaker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+### Git Repo path (https://github.com/HarikcUW/MyFaker.git)
 ## MyFaker - Fake data generator
 
 ## Introduction
@@ -28,11 +29,10 @@ This package is helpful for Students, programmers/developers, data scientists an
 ## How to Use:
 Follow below steps to use the MyFaker package.
 - Get latest code from Repo
-    ```git clone https://github.com/HarikcUW/Data515_FakerExt.git```
+    ```git clone https://github.com/HarikcUW/MyFaker.git```
 - Check and update constants in constants.py file.
     - You can define Max number of rows and want to repeat any values or not
 - Install MyFaker package using setup
-    ``` cd MyFaker ```
     ``` python setup.py install ```
 - In your script file, Import MyFaker package
 - Define data schema and prepare configuration dictionary list
