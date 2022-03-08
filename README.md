@@ -54,7 +54,7 @@ Config parameter dictionary has following items
 ### Generate random data using regular expression. In this scenario no input data is required.
 ```
 # import MyFaker package
-from myfaker.code.helper import DataGenerator
+from myfaker.code.dataGenerator import DataGenerator
 
 # Define config dictionary list. rstr package is used to generate data as defined in regular expression  
 configList = [{'sourceType':'RegularExpression', 'values' : [ {'name' :'Featurs'
@@ -67,7 +67,7 @@ configList = [{'sourceType':'RegularExpression', 'values' : [ {'name' :'Featurs'
 
 # Generate 10 random rows as defined in configList
 dg = DataGenerator(10,configList)
-dfr = dg.processInput()
+dfr = dg.generateData()
 print(dfr)
 
 ------------------------------------------------------------------
@@ -90,7 +90,7 @@ Output:
 ### Generate random data using data frame. In this scenario user can get data from a file or create a list and convert it to data frame. 
 ```
 import pandas as pd 
-from myfaker.code.helper import DataGenerator
+from myfaker.code.dataGenerator import DataGenerator
 
 df_Color = pd.DataFrame(['Green','Red','Yellow','Blue'], columns = ['Color'])
 
@@ -102,7 +102,7 @@ configList = [{'sourceType':'dataframe', 'values' : [ {'name':'df_Color', 'df': 
              ]
 
 dg = DataGenerator(10,configList)
-dfr = dg.processInput()
+dfr = dg.generateData()
 print(dfr)
 
 ------------------------------------------------------------------
