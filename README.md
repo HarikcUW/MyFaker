@@ -29,6 +29,9 @@ This package is helpful for Students, programmers/developers, data scientists an
 ## Git repo structure:
 ![image](https://github.com/HarikcUW/myfaker/blob/271cead1125363c81b07167c1a271b344f580a72/docs/Git%20Repo%20Folder%20Structure.png)
 
+# Data
+This package don't need any data. Added sample data files to show sample examples and test the package
+
 ## How to Use:
 Follow below steps to use the MyFaker package.
 - Get latest code from Repo
