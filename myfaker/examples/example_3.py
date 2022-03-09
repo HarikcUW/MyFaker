@@ -13,8 +13,8 @@ my_path = os.path.abspath(os.path.dirname(__file__))
 df_Product_Path = os.path.join(my_path, "data/ProductInfo.csv")
 df_Country_Path = os.path.join(my_path, "data/CountryInfo.csv")
 
-df_Product= pd.read_csv(df_Product_Path)
-df_Country= pd.read_csv(df_Country_Path)
+df_Product= pd.read_csv(df_Product_Path, sep='\t')
+df_Country= pd.read_csv(df_Country_Path, sep=',')
 
 configList = [{'sourceType': 'dataframe', 'values': [{'name': 'df_Country', 'df': df_Country
                    , 'columns': [{'colName': 'CountryCode', 'colRename': 'CountryISOCode', 'prefix': ''}
