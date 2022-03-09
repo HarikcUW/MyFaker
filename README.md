@@ -39,6 +39,11 @@ Follow below steps to use the MyFaker package.
 - Install MyFaker package using setup
 
     ``` python setup.py install ```
+- Run examples provided
+    ``` $ python3 myfaker/myfaker/examples/example_1.py ```
+    ``` $ python3 myfaker/myfaker/examples/example_2.py ```
+    ``` $ python3 myfaker/myfaker/examples/example_3.py ```
+      
 - In your script file, Import myfaker package
 - Define data schema and prepare configuration dictionary list
 - Create an object and call generateData() function with parameters (number of rows to generate, configuration dictionary list)
