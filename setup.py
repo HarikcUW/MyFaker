@@ -7,6 +7,7 @@ from setuptools import setup
 
 setup(
     name="myfaker",
+    version="0.0.1",
     author="Hari Kishor Chintada",
     author_email="harikc@uw.edu",
     description="Fake data generator",
@@ -20,5 +21,5 @@ setup(
     ],
     packages= find_packages(),
     python_requires=">=3.0",
-    #install_requires=['pandas', 'rsts']
+    install_requires=['pandas', 'numpy', 'rstr']
 )
