@@ -39,9 +39,12 @@ Follow below steps to use the MyFaker package.
 - Install MyFaker package using setup
 
     ``` python setup.py install ```
-- Run examples provided
+- Run examples provided in repo
+
     ``` $ python3 myfaker/myfaker/examples/example_1.py ```
+    
     ``` $ python3 myfaker/myfaker/examples/example_2.py ```
+    
     ``` $ python3 myfaker/myfaker/examples/example_3.py ```
       
 - In your script file, Import myfaker package
