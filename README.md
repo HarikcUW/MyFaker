@@ -26,6 +26,9 @@ This package is helpful for Students, programmers/developers, data scientists an
 - David, a student, would like to create a model using eCommerce sales data, but it is hard to find real credit card data for his experiment. He can use this package to generate his own data. He can specify the format of the card and other properties and generate thousands of records in no time.
 - Mary, a data scientist, wants to analyze a model's performance and needs quality data. She can use this package to generate necessary data.
 
+## Fit repo structure:
+![image](https://user-images.githubusercontent.com/92060455/157350207-23e7063e-e272-4e30-9384-126b84359ccd.png)
+
 ## How to Use:
 Follow below steps to use the MyFaker package.
 - Get latest code from Repo
