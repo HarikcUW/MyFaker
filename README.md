@@ -38,7 +38,7 @@ Follow below steps to use the MyFaker package.
     ``` python setup.py install ```
 - In your script file, Import myfaker package
 - Define data schema and prepare configuration dictionary list
-- Create an object and call processInput function with parameters (number of rows to generate, configuration dictionary list)
+- Create an object and call generateData() function with parameters (number of rows to generate, configuration dictionary list)
 - Capture return data frame
  
 ### How to prepare configuration dictionary:
