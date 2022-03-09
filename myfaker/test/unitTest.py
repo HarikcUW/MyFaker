@@ -1,10 +1,10 @@
 import unittest
 import pandas as pd
 
-from .code.dataGenerator import DataGenerator
-from .code.regExProcessor import RegExProcessor
-from .code.metricsProcessor import MetricsProcessor
-from .code.dataframeProcessor import DataframeProcessor
+from myfaker.code.dataGenerator import DataGenerator
+from myfaker.code.regExProcessor import RegExProcessor
+from myfaker.code.metricsProcessor import MetricsProcessor
+from myfaker.code.dataframeProcessor import DataframeProcessor
 
 class TestHelperMethods(unittest.TestCase):
     
